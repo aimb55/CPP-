@@ -1,0 +1,92 @@
+#include<iostream>
+using namespace std;
+class Math{
+	int a,b;
+	public:
+		Math(int n1,int n2)
+		{
+			a=n1;b=n2;
+		}
+		int myeongeok()
+		{
+			return a*b;
+		}
+};
+int main()
+{
+	int a,b;
+	cout<<"면적을 구할 것이니 두수를 입력하시오"<<endl; 
+	cin>>a>>b;
+	Math me(a,b);
+	cout<<me.myeongeok();
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include<iostream>
+using namespace std;
+class Math{
+	int a,b;
+	double c,d;
+	
+	public:
+		int add(int n1,int n2){
+			a=n1;
+			b=n2;
+			return a+b;
+		}
+		double add(double n1,double n2){
+			c=n1;
+			d=n2;
+			return c+d;
+		}
+};
+int main()
+{
+	Math m;
+	cout<<"2와3을 더한값과 1.1과 2.2를 더한값"<<endl;
+	cout<<m.add(2,2)<<"     ";
+	cout<<m.add(1.1,2.2);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include<iostream> 
+using namespace std;
+class CPnt{
+	int a,b;
+	public:
+		CPnt(){	}
+		CPnt(int n1,int n2){
+			a=n1;b=n2;
+		}
+		pr(){
+			cout<<a<<"  "<<b<<endl;
+		}
+		CPnt add(CPnt M){
+			return CPnt(M.a+a,M.b+b);
+		}
+		CPnt operator+(CPnt M){
+			return CPnt(M.a+a,M.b+b);
+		}
+		CPnt operator=(CPnt M){
+			return CPnt(a=M.a,b=M.b);
+		}
+	
+};
+int main()
+{
+	
+	CPnt p1(2,3),p2(3,4),p;            //1)객체를  만들었고 오버로딩도 되어있다. 
+	p=p1;
+	p.pr();                            //2) operator = 을 활용해서 p에 넣어주었다. 
+	cout<<"(2,3)지점과 (3,4)지점을 더한 값은?"<<endl; 
+	p=p1.add(p2);                      //3)p에 p1과 p2를 더한 값을 담았다 
+	p.pr();
+	p=p1+p2;							//4) add함수를 이용해 operator +를  만들어서 사용했다. 
+	p.pr();                           
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+수업시간에 많이 했던 3번은 문제 없이 잘 되었으나 상대적으로 쉽다고 생각된 1번과 2번 문제는 생각외로 쉽지 않다고 느껴졌는데 
+상대적으로 많이 했던 3번이기에 1번과 2번이 익숙하지 않아서 쉽지 않았던것 같습니다. 몇번더 연습해보면 문제가 없을거 같고 자신감도 늘것 같습니다.
+지금 java도 공부중인데 가끔식 비슷하면서 표현이 다른부분(예: 함수(int x,int y):a(x),b(y){} and <>를 자주 쓰는것)이 
+조금 혼란스럽게 느껴지기도 했습니다. 수업을 배운다는 느낌보다 따라간다는 표현이 알맞은 것 같지만 하면 할수록 자신감과 재미를 느끼게 
+되는 것 같아서 다행이라고 생각됩니다.
+몇일전 제 생일을 축하해주셨는데, 개인적으로 교수님에게 생일축하메시지를 보내는게 어렵게 느껴져서 지금 생신을 축하드린다는 말을 과제의 글귀로나마
+적게 되었습니다. 생일 인사가 형식적 인사일수도 있지만 심재창 교수님은 한분밖에 없는 분이십니다. 생신축하드립니다.
